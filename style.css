@@ -5,7 +5,7 @@
 body {
   margin: 0;
   height: 100vh;
-  background-color: turquoise;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,4 +13,5 @@ body {
 
 span.counter {
   font-size: 3em;
+  color: white;
 }
