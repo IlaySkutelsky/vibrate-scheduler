@@ -1,9 +1,5 @@
 const start = document.timeline.currentTime
 
-// function handleClick() {
-//   Notification.requestPermission()
-// }
-
 function frame(time) {
   const elapsed = time - start
   const seconds = Math.round(elapsed / 1000)
@@ -18,7 +14,7 @@ function frame(time) {
 function updateUI(seconds) {
   let counterElm = document.querySelector(".counter")
   if (counterElm) counterElm.innerText = seconds
-  if (seconds%13 != 0) return
+  if (seconds%10 != 0) return
   window.navigator.vibrate(200)
   // let notification = new Notification("Secoonds: " + seconds, {
   //   vibrate: 200
