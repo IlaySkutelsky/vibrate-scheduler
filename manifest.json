@@ -2,5 +2,6 @@
   "name": "Vibrate Scheduler",
   "short_name": "vibSche",
   "start_url": ".",
-  "permissions": ["idle", "notifications"]
+  "permissions": ["idle", "notifications"],
+  "display": "fullscreen"
 }
