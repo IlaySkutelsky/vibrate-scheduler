@@ -1,10 +1,7 @@
-Notification.requestPermission()
-
 const start = document.timeline.currentTime
 
 function handleLoad() {
-  document.documentElement.requestFullscreen()
-  .then(msg=>console.log(msg))
+  Notification.requestPermission()
 }
 
 function frame(time) {
