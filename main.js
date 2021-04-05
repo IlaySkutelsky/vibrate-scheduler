@@ -1,6 +1,6 @@
 const start = document.timeline.currentTime
 
-function handleLoad() {
+function handleClick() {
   Notification.requestPermission()
 }
 
