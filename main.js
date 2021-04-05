@@ -19,7 +19,7 @@ function updateUI(seconds) {
   let counterElm = document.querySelector(".counter")
   if (counterElm) counterElm.innerText = seconds
   if (seconds%13 != 0) return
-  // window.navigator.vibrate(200)
+  window.navigator.vibrate(200)
   // let notification = new Notification("Secoonds: " + seconds, {
   //   vibrate: 200
   // });
