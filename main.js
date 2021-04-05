@@ -25,10 +25,12 @@ function updateUI(seconds) {
   if (counterElm) counterElm.innerText = seconds
 
   if (currentEventIndex >= myEvents.length-1) return
-  if (seconds === myEvents[currentEventIndex].seconds) {
-    window.navigator.vibrate(myEvents[currentEventIndex].vibrationPattern)
+  let myEvent = myEvents[currentEventIndex]
+  if (seconds === myEvent.seconds) {
+    let vibSuccess = window.navigator.vibrate(myEvent.vibrationPattern)
+    console.log(vibSuccess);
     let textElm = document.querySelector(".text")
-    if (textElm) textElm.innerText = myEvents[currentEventIndex].text
+    if (textElm) textElm.innerText = vibSuccess
     currentEventIndex++
   }
   // let notification = new Notification("Secoonds: " + seconds, {
