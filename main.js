@@ -23,6 +23,8 @@ function frame(time) {
 function updateUI(seconds) {
   let counterElm = document.querySelector(".counter")
   if (counterElm) counterElm.innerText = seconds
+
+  if (currentEventIndex >= myEvents.length-1) return
   if (seconds === myEvents[currentEventIndex].seconds) {
     window.navigator.vibrate(myEvents[currentEventIndex].vibrationPattern)
     let textElm = document.querySelector(".text")
