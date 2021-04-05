@@ -1,3 +1,5 @@
+Notification.requestPermission()
+
 const start = document.timeline.currentTime
 
 function frame(time) {
@@ -13,7 +15,10 @@ function frame(time) {
 
 function updateUI(seconds) {
   if (seconds%3 != 0) return
-  window.navigator.vibrate(200)
+  // window.navigator.vibrate(200)
+  let notification = new Notification("Hi there!", {
+    vibrate: 200
+  });
   console.log("Tick! " + seconds);
 }
 
