@@ -6,4 +6,11 @@ body {
   margin: 0;
   height: 100vh;
   background-color: turquoise;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span.counter {
+  font-size: 3em;
 }
