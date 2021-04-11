@@ -13,7 +13,8 @@ let currentEventIndex = 0
 function frame(time) {
   const elapsed = time - start
   const seconds = Math.round(elapsed / 1000)
-  updateUI(seconds)
+  updateTime(seconds)
+  handleEvent(seconds)
   const targetNext = (seconds + 1) * 1000 + start
   setTimeout(
     _=> requestAnimationFrame(frame),
@@ -21,11 +22,15 @@ function frame(time) {
   )
 }
 
-function updateUI(seconds) {
+function updateTime(seconds) {
   let counterElm = document.querySelector(".counter")
-  if (counterElm) counterElm.innerText = seconds
+  let minutesText = Math.floor(seconds/60).toString().padStart(2, 0)
+  let secondsText = (seconds%60).toString().padStart(2, 0)
+  if (counterElm) counterElm.innerText = minutesText + ":" + secondsText
+}
 
-  if (currentEventIndex >= myEvents.length-1) return
+function handleEvent(seconds) {
+  if (currentEventIndex >= myEvents.length) return
   let myEvent = myEvents[currentEventIndex]
   if (seconds === myEvent.seconds) {
     window.navigator.vibrate(myEvent.vibrationPattern)
