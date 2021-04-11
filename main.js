@@ -28,6 +28,7 @@ function updateUI(seconds) {
   if (currentEventIndex >= myEvents.length-1) return
   let myEvent = myEvents[currentEventIndex]
   if (seconds === myEvent.seconds) {
+    window.navigator.vibrate(myEvent.vibrationPattern)
     let textElm = document.querySelector(".text")
     if (textElm) textElm.innerText = myEvent.text
     currentEventIndex++
