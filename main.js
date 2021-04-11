@@ -5,6 +5,7 @@ let myEvents = [
   {seconds: 10, vibrationPattern: 200, text: "2"},
   {seconds: 15, vibrationPattern: 400, text: "3"},
   {seconds: 25, vibrationPattern: [200,200,200], text: "no no 4"}
+  {seconds: 30, vibrationPattern: 400, text: "mmm 5"},
 ]
 
 let currentEventIndex = 0
@@ -27,10 +28,8 @@ function updateUI(seconds) {
   if (currentEventIndex >= myEvents.length-1) return
   let myEvent = myEvents[currentEventIndex]
   if (seconds === myEvent.seconds) {
-    let vibSuccess = window.navigator.vibrate(myEvent.vibrationPattern)
-    console.log(vibSuccess);
     let textElm = document.querySelector(".text")
-    if (textElm) textElm.innerText = vibSuccess
+    if (textElm) textElm.innerText = myEvent.text
     currentEventIndex++
   }
   // let notification = new Notification("Secoonds: " + seconds, {
