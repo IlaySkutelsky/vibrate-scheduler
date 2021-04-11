@@ -4,8 +4,8 @@ let myEvents = [
   {seconds: 5, vibrationPattern: [200,200,200], text: "hey hey ho ho hopa hopa"},
   {seconds: 10, vibrationPattern: 200, text: "2"},
   {seconds: 15, vibrationPattern: 400, text: "3"},
-  {seconds: 25, vibrationPattern: [200,200,200], text: "no no 4"}
-  {seconds: 30, vibrationPattern: 400, text: "mmm 5"},
+  {seconds: 25, vibrationPattern: [200,200,200], text: "no no 4"},
+  {seconds: 30, vibrationPattern: 400, text: "mmm 5"}
 ]
 
 let currentEventIndex = 0
