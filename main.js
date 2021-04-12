@@ -1,11 +1,11 @@
-const start = document.timeline.currentTime
+let start
 
 let myEvents = [
   {seconds: 5, vibrationPattern: [200,200,200], text: "hey hey ho ho hopa hopa"},
   {seconds: 10, vibrationPattern: 200, text: "2"},
   {seconds: 15, vibrationPattern: 400, text: "3"},
-  {seconds: 25, vibrationPattern: [200,200,200], text: "no no 4"},
-  {seconds: 30, vibrationPattern: 400, text: "mmm 5"}
+  {seconds: 20, vibrationPattern: [200,200,200], text: "no no 4"},
+  {seconds: 25, vibrationPattern: 400, text: "mmm 5"}
 ]
 
 let currentEventIndex = 0
@@ -44,4 +44,21 @@ function handleEvent(seconds) {
   console.log("Tick! " + seconds);
 }
 
-frame(start)
+
+function play() {
+  start = document.timeline.currentTime
+  frame(start)
+  hideElm(".play-btn")
+  showElm(".counter")
+  showElm(".text")
+}
+
+function hideElm(selector) {
+  let elm = document.querySelector(selector)
+  elm.classList.add("hidden")
+}
+
+function showElm(selector) {
+  let elm = document.querySelector(selector)
+  elm.classList.remove("hidden")
+}

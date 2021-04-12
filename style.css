@@ -12,7 +12,16 @@ body {
   align-items: center;
 }
 
+.play-btn {
+  font-size: 7em;
+  cursor: pointer;
+}
+
 span {
   font-size: 3em;
   color: white;
+}
+
+.hidden {
+  display: none;
 }
