@@ -1,14 +1,14 @@
 let start
 
 let myEvents = [
-  {seconds: "00:05", vibrationPattern: 400, text: "test2"},
-  {seconds: "02:28", vibrationPattern: 200, text: "go to door 1"},
-  {seconds: "02:29", vibrationPattern: 200, text: "ilay gets out 1"},
-  {seconds: "02:49", vibrationPattern: 400, text: "get ready"},
-  {seconds: "02:54", vibrationPattern: 400, text: "ilay gets in 1"},
+  {seconds: "00:05", vibrationPattern: 200, text: "test2"},
+  {seconds: "02:28", vibrationPattern: [200,200,200], text: "go to door 1"},
+  {seconds: "02:29", vibrationPattern: 400, text: "ilay gets out 1"},
+  {seconds: "02:49", vibrationPattern: [200,200,200], text: "get ready"},
+  {seconds: "02:53", vibrationPattern: 400, text: "ilay gets in 1"},
   {seconds: "04:07", vibrationPattern: [200,200,200], text: "go to door 2"},
-  {seconds: "04:15", vibrationPattern: [200,200,200], text: "ilay gets out 2, dies"},
-  {seconds: "05:47", vibrationPattern: 400, text: "get ready"},
+  {seconds: "04:15", vibrationPattern: 400, text: "ilay gets out 2, dies"},
+  {seconds: "05:47", vibrationPattern: [200,200,200], text: "get ready"},
   {seconds: "06:01", vibrationPattern: 400, text: "open door, ilay gets in 2"}
 ]
 
