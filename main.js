@@ -1,11 +1,11 @@
 let start
 
 let myEvents = [
-  {seconds: 5, vibrationPattern: [200,200,200], text: "hey hey ho ho hopa hopa"},
-  {seconds: 10, vibrationPattern: 200, text: "2"},
-  {seconds: 15, vibrationPattern: 400, text: "3"},
-  {seconds: 20, vibrationPattern: [200,200,200], text: "no no 4"},
-  {seconds: 25, vibrationPattern: 400, text: "mmm 5"}
+  {seconds: "00:05", vibrationPattern: 400, text: "test"},
+  {seconds: "02:29", vibrationPattern: 200, text: "ilay gets out 1"},
+  {seconds: "02:54", vibrationPattern: 400, text: "ilay gets in 1"},
+  {seconds: "04:15", vibrationPattern: [200,200,200], text: "ilay gets out 2, dies"},
+  {seconds: "06:01", vibrationPattern: 400, text: "open door, ilay gets in 2"}
 ]
 
 let currentEventIndex = 0
@@ -31,11 +31,12 @@ function updateTime(seconds) {
 
 function handleEvent(seconds) {
   if (currentEventIndex >= myEvents.length) return
-  let myEvent = myEvents[currentEventIndex]
-  if (seconds === myEvent.seconds) {
-    window.navigator.vibrate(myEvent.vibrationPattern)
+  let nextEvent = myEvents[currentEventIndex]
+  let nextGoalInSeconds = timetringToSeconds(nextEvent.seconds)
+  if (seconds >= nextGoalInSeconds) {
+    window.navigator.vibrate(nextEvent.vibrationPattern)
     let textElm = document.querySelector(".text")
-    if (textElm) textElm.innerText = myEvent.text
+    if (textElm) textElm.innerText = nextEvent.text
     currentEventIndex++
   }
   // let notification = new Notification("Secoonds: " + seconds, {
@@ -51,6 +52,14 @@ function play() {
   hideElm(".play-btn")
   showElm(".counter")
   showElm(".text")
+}
+
+function timetringToSeconds(timeString) {
+  let timeArray = timeString.split(":")
+  let minutes = +timeArray[0]
+  let seconds = +timeArray[1]
+  let totalSeconds = minutes*60 + seconds
+  return totalSeconds
 }
 
 function hideElm(selector) {
