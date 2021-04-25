@@ -1,9 +1,9 @@
 let start
 
 let myEvents = [
-  {seconds: "00:05", vibrationPattern: 200, text: "test2"},
-  {seconds: "02:28", vibrationPattern: [200,200,200], text: "go to door 1"},
-  {seconds: "02:29", vibrationPattern: 400, text: "ilay gets out 1"},
+  {seconds: "00:05", vibrationPattern: 200, text: "test3"},
+  {seconds: "02:20", vibrationPattern: [200,200,200], text: "go to door 1"},
+  {seconds: "02:28", vibrationPattern: 400, text: "ilay gets out 1"},
   {seconds: "02:49", vibrationPattern: [200,200,200], text: "get ready"},
   {seconds: "02:53", vibrationPattern: 400, text: "ilay gets in 1"},
   {seconds: "04:07", vibrationPattern: [200,200,200], text: "go to door 2"},
