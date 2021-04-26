@@ -1,16 +1,16 @@
 let start
 
 let myEvents = [
-  {seconds: "00:05", vibrationPattern: 200, text: "test3"},
-  {seconds: "02:20", vibrationPattern: [200,200,200], text: "go to door 1"},
-  {seconds: "02:28", vibrationPattern: 400, text: "ilay gets out 1"},
-  {seconds: "02:49", vibrationPattern: [200,200,200], text: "get ready"},
-  {seconds: "02:53", vibrationPattern: 400, text: "ilay gets in 1"},
-  {seconds: "04:00", vibrationPattern: [200,200,200], text: "say look at me"},
-  {seconds: "04:07", vibrationPattern: [200,200,200], text: "go to door 2"},
-  {seconds: "04:15", vibrationPattern: 400, text: "ilay gets out 2, dies"},
-  {seconds: "05:47", vibrationPattern: [200,200,200], text: "get ready"},
-  {seconds: "06:01", vibrationPattern: 400, text: "open door, ilay gets in 2"}
+  {seconds: "00:05", vibrationPattern: 200, text: "test4"},
+  {seconds: "02:20", vibrationPattern: [400,200,400], text: "go to door 1"},
+  {seconds: "02:28", vibrationPattern: 600, text: "ilay gets out 1"},
+  {seconds: "02:49", vibrationPattern: [400,200,400], text: "get ready"},
+  {seconds: "02:53", vibrationPattern: 600, text: "ilay gets in 1"},
+  {seconds: "04:00", vibrationPattern: [400,200,400], text: "say look at me"},
+  {seconds: "04:06", vibrationPattern: [400,200,400], text: "go to door 2"},
+  {seconds: "04:13", vibrationPattern: 600, text: "ilay gets out 2, dies"},
+  {seconds: "05:47", vibrationPattern: [400,200,400], text: "get ready"},
+  {seconds: "06:01", vibrationPattern: 600, text: "open door, ilay gets in 2"}
 ]
 
 let currentEventIndex = 0
