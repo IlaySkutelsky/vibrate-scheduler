@@ -1,7 +1,7 @@
 let start
 
 let myEvents = [
-  {seconds: "00:05", vibrationPattern: 200, text: "test2"},
+  {seconds: "00:05", vibrationPattern: 200, text: "test3"},
   {seconds: "01:48", vibrationPattern: [400,200,400], text: "Proud to present, go to door 1"},
   {seconds: "02:01", vibrationPattern: [400,200,400], text: "get ready to exit 1"},
   {seconds: "02:04", vibrationPattern: 600, text: "exit 1"},
@@ -9,7 +9,8 @@ let myEvents = [
   {seconds: "03:02", vibrationPattern: 600, text: "enter 1"},
   {seconds: "03:38", vibrationPattern: [400,200,400], text: "walk to door 2"},
   {seconds: "03:46", vibrationPattern: [400,200,400], text: "exit 2"},
-  {seconds: "04:19", vibrationPattern: 600, text: "enter 2"},
+  {seconds: "04:26", vibrationPattern: [400,200,400], text: "get ready to enter 2"},
+  {seconds: "04:29", vibrationPattern: 600, text: "enter 2"},
   {seconds: "05:12", vibrationPattern: [400,200,400], text: "walk to door 3"},
   {seconds: "05:18", vibrationPattern: [600], text: "exit 3"},
   {seconds: "07:10", vibrationPattern: 600, text: "enter 3"}
@@ -17,7 +18,8 @@ let myEvents = [
 
 /*
 
-
+get ready 2 exit 2 early
+exit 2 early
 
 */
 
